@@ -1,0 +1,124 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-size: 14px;
+    color: #646464;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.no-margin{
+    margin-top: 0;
+    margin-bottom: 0;
+}
+*{
+    box-sizing: border-box;
+    outline: none;
+}
+form .form-control{
+    height: 40px;
+    border: 1px solid #ccc;
+    border-left-color: rgb(204,204,204);
+    border-left-style:solid;
+    border-left-width: 1px;
+    border-left: none;
+
+}
+
+.msf{
+     margin: 0;
+     margin-top: 5px;
+}
+
+.msf .form-section{
+    float: left;
+    position: relative;
+}
+.msf .control-select{
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    opacity: 0;
+    /* border: 2px solid red; */
+
+}
+.msf .c-selector{
+    font-family: sans-serif;
+    border-radius: 3px 0 0 3px;
+    text-decoration: none;
+    color: #646464;
+    background: #ededed;
+    line-height: 38px;
+    padding: 0 8px;
+    display: inline-block;
+    font-size: 13px;
+    border: 1px solid #ccc;
+}
+
+.msf .section-left{
+
+}
+.msf .section-mid{
+    width: 60%;
+
+}
+.msf .control-text{
+    border-radius: 0px;
+    width: 100%;
+}
+
+.msf .control-submit{
+    color: white;
+    background: orange;
+    border-radius: 0 3px 3px 0;
+    border: none;
+}
+
+
+.header-mid{
+    padding-top: 20px;
+}
+.header-nav{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+
+.header-nav li{
+    display: inline-block;
+    margin-right: 30px;
+}
+.header-nav li a{
+    color: #e7e0e0a8;
+    text-decoration: none;
+    font-size: 14px;
+    font-family: arial;
+}
+.header-nav li a .categories-toggle{
+    border: 1px solid #e7e0e070;    
+    padding: 7px 5px;
+    border-radius: 3px;
+    color: #e7e0e0;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+.header-nav .categories-toggle i{
+    color: #e7e0e0a7;
+    font-size: 13px;
+
+}
+.header-nav .categories-toggle i a .header-nav-bold{
+    color: #e7e0e0;
+    font-weight: 600;
+      
+}
+ .header-nav-line{
+     display: block;
+
+ }
+
+ .header-nav-line .header-nav-line-1{
+     font-size: 12px;
+     margin-top: 3px;
+ }

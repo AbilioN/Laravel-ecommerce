@@ -1,0 +1,15 @@
+.header{
+    background: #1f2630;
+    padding-top: 5px;
+     padding-bottom: 10px;
+     padding-left: 4%;
+     padding-right: 2%;
+    
+}
+.header .logo {
+    color: #e7e0e0;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    padding-bottom: 4%;
+}
