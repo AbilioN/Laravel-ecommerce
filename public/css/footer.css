@@ -1,0 +1,65 @@
+.main{
+    min-height: 300px;
+}
+.footer{
+    background: #1f2630;
+    color: #e7e0e0;
+    padding: 10px 0;
+    
+}
+.footer .footer-section h3.section-title{
+    font-size: 26px;
+    /* margin: 0; */
+}
+
+.footer ul.socials{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+.footer ul.socials li{
+    display: inline-block;
+    margin-right: 6px;
+
+}
+.footer ul.socials li a{
+    color: #e7e0e0;
+    font-size: 19px;
+}
+.footer ul.categories{
+    padding: 10px 0;
+    list-style: none;
+    margin: 0;
+}
+.footer ul.categories li{
+    display: inline-block;
+    margin: 3px 0;
+}
+.footer ul.categories li a {
+    color: #646464;
+    text-decoration: none;
+    text-transform: capitalize;
+    min-width: 100px;
+    display: block;
+    background: #ededed;
+    text-align: center;
+    font-size: 12px;
+    padding: 3px;
+    border-radius: 4px;
+    font-family: sans-serif;
+}
+.footer ul.account {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+.footer ul.account li{
+    display: block;
+    margin: 5px 0;
+}
+.footer ul.account li a{
+    color: #e7e0e0;
+    text-decoration: none;
+    font-size: inherit;
+    
+}
