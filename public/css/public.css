@@ -23,7 +23,12 @@ form .form-control{
     border-left: none;
 
 }
-
+.relative{
+    position: relative;
+}
+.hide{
+    display: none;
+}
 .msf{
      margin: 0;
      margin-top: 5px;
@@ -73,11 +78,10 @@ form .form-control{
     border-radius: 0 3px 3px 0;
     border: none;
 }
-
-
 .header-mid{
     padding-top: 20px;
 }
+
 .header-nav{
     padding: 0;
     margin: 0;
@@ -89,13 +93,22 @@ form .form-control{
     display: inline-block;
     margin-right: 30px;
 }
+
 .header-nav li a{
     color: #e7e0e0a8;
     text-decoration: none;
     font-size: 14px;
     font-family: arial;
 }
-.header-nav li a .categories-toggle{
+
+.header-nav li a.header-nav-bold{
+    /* color: #e7e0e070; */
+    color: #e7e0e0;
+
+    font-weight: 600;
+}
+
+.header-nav li a.categories-toggle{
     border: 1px solid #e7e0e070;    
     padding: 7px 5px;
     border-radius: 3px;
@@ -103,22 +116,78 @@ form .form-control{
     text-transform: uppercase;
     font-weight: 600;
 }
-.header-nav .categories-toggle i{
+
+ .header-nav .categories-toggle i{
     color: #e7e0e0a7;
+    /* border: 1px solid #e7e0e0; */
     font-size: 13px;
 
+} 
+
+.header-nav .multi-line-header-nav{
+    position: absolute;
+    top: -22px;
+
+}
+
+.header-nav-line{
+    display: block;
 }
 .header-nav .categories-toggle i a .header-nav-bold{
-    color: #e7e0e0;
+    /* color: #e7e0e0; */
+    color: red;
     font-weight: 600;
       
 }
- .header-nav-line{
+.teste{
+    color: red;
+}
+ .header-shop{
      display: block;
-
+     position: relative;
  }
+
+ .header-shop .items-count{
+     position: absolute;
+     color: orange;
+ }
+.header-shop img{
+    width: 55px;
+}
+
 
  .header-nav-line .header-nav-line-1{
      font-size: 12px;
      margin-top: 3px;
  }
+.header-nav-line-2{
+
+} 
+
+
+
+
+
+.header div .a-list{
+    position: absolute;
+    /* border: 2px solid red; */
+    background: #fbfafa;
+    min-width: 300px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    padding: 5px 0;
+    z-index: 3000;
+    display: none;
+}
+.header div .a-list .list-item{
+    display: block;
+    color: #646464;
+    text-decoration: none;
+    text-transform: capitalize;
+    padding: 4px 4px;
+    font-family: sans-serif;
+}
+
+.header-nav li:hover div.a-list{
+    display:block;
+}

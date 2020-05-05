@@ -19,7 +19,7 @@
                             <option value="">Desktops</option>
                             <option value="">Laptops</option>
                         </select>
-                        <a href="#" class="c-selector form-control"><span>All Categories <i class="fa fa-caret-down"></i></span></a>
+                        <a href="#" class="c-selector form-control"><span class="selector-face">All Categories <i class="fa fa-caret-down"></i></span></a>
                     </div>
                     <div class="form-section section-mid">
                         <input type="text" name="query" class="form-control control-text" placeholder="Search in products... ">
@@ -35,7 +35,14 @@
         <div class="row">
             <div class="col col-offset-lg-2 col-offset-md-2 col-lg-6 col-md-6 col-xs-12 col-sm-12">
                 <ul class="header-nav">
-                    <li class="relative"><a href="#" class="categories-toggle">Categories <i class="fa fa-caret-down"></i></a></li>
+                    <li class="relative"><a href="#" class="categories-toggle">Categories <i class="fa fa-caret-down"></i></a>
+                        <div class="a-list">
+                            <a href="#" class="list-item">Eletronics</a>
+                            <a href="#" class="list-item">Desktops</a>
+                            <a href="#" class="list-item">Laptops</a>
+                            <a href="#" class="list-item">Watches</a>
+                        </div>
+                    </li>
                     <li> <a href="#">Home</a></li>
                     <li> <a href="#">Track order</a></li>
                     <li> <a href="#">Contact</a></li>
@@ -46,12 +53,28 @@
                 <ul class="header-nav multi-line-header-nav">
                    <li>
                        <a href="">
-                           <span class="header-nav-line header-nav-line-1">Welcome, Sign in</span>
-                           <span class="header-nav-line header-nav-line-2">Accounts & lists <i class="fa fa-caret-down"></i></span>
+                           <span class="header-nav-line header-nav-line-1"> Welcome, Sign in</span>
+                           <span class="header-nav-line header-nav-line-2"> Accounts & lists <i class="fa fa-caret-down"></i></span>
                        </a>
+                       <div class="a-list">
+                           <a href="" class="list-item">Account</a>
+                           <a href="" class="list-item">Wish List</a>
+                            @if(Auth::check())
+                           <a href="{{route('logout')}}" class="list-item" onclick="event.preventDefault(); this.querySelector("form.logout-form").submit()">
+                            Log out
+                                <form action="{{route('logout')}}" method="POST">
+                                    @csrf
+                                    <input type="submit" class="hide">
+                                </form>
+                           </a>
+                            @else
+                                <a href="{{route('login')}}" class="list-item"> Login</a>
+                                <a href="{{rolute('register')}}" class="list-item"> register</a>
+                            @endif
+                       </div>
                    </li>
                    <li>
-                       <a href="#" class="header-nav-bold">Orders </a>
+                       <a href="#" class="relative header-nav-bold teste">Orders </a>
                    </li>
                    <li class="relative">
                         <a href="#" class="header-shop">

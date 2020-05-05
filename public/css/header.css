@@ -4,7 +4,6 @@
      padding-bottom: 10px;
      padding-left: 4%;
      padding-right: 2%;
-    
 }
 .header .logo {
     color: #e7e0e0;
@@ -12,4 +11,12 @@
     text-transform: uppercase;
     letter-spacing: 4px;
     padding-bottom: 4%;
+}
+.teste1{
+    border: 2px solid red;
+    margin-top: 10px;
+    padding-top: 10px;
+}
+.teste2{
+    border: 2px solid green;
 }
