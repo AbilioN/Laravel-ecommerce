@@ -18,7 +18,7 @@
 
 @endphp --}}
 <ul class="classe">
-    @foreach (auth()->user()->roles as $roles)
+    @foreach (auth()->user()->roles as $role)
         @includeIf('partials.'.$role->role.'-account-sidebar')
     @endforeach
     {{-- <li><a href="#">{{$roles[0]->text}}</a></li>

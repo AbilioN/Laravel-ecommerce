@@ -41,9 +41,7 @@ class User extends Authenticatable
 
     // more functions modified before recorded whole course
 
-    // public function isAdmin(){
-    //     return $this->roles->pluck('role')->contains('admin');
-    // }
+  
 
     // public function coupons(){
     //     return $this->belongsToMany('App\Models\Coupon' , 'reviews' , 'userId' , 'productId');
@@ -66,5 +64,9 @@ class User extends Authenticatable
 
     public function roles(){
         return $this->belongsToMany('App\Models\Role' , 'user_roles' , 'userId' , 'roleId');
+    }
+
+    public function isAdmin(){
+        return $this->roles()->pluck('role')->contains('admin');
     }
 }
