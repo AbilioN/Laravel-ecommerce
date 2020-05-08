@@ -29,6 +29,20 @@ form .form-control{
 .hide{
     display: none;
 }
+
+.main{
+    min-height: 300px;
+
+}
+.left{
+    float: left;
+}
+
+
+
+
+
+/* change this to header in future */
 .msf{
      margin: 0;
      margin-top: 5px;
@@ -160,9 +174,7 @@ form .form-control{
      font-size: 12px;
      margin-top: 3px;
  }
-.header-nav-line-2{
 
-} 
 .header div .a-list{
     position: absolute;
     /* border: 2px solid red; */
@@ -173,6 +185,7 @@ form .form-control{
     padding: 5px 0;
     z-index: 3000;
     display: none;
+    z-index: 1000;
 }
 .header div .a-list .list-item{
     display: block;

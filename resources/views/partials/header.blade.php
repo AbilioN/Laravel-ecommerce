@@ -53,11 +53,11 @@
                 <ul class="header-nav multi-line-header-nav">
                    <li>
                        <a href="">
-                           <span class="header-nav-line header-nav-line-1"> Welcome, Sign in</span>
+                           <span class="header-nav-line header-nav-line-1"> Welcome, {{Auth::check() ? Auth::user()->name : 'Sign in'}}</span>
                            <span class="header-nav-line header-nav-line-2"> Accounts & lists <i class="fa fa-caret-down"></i></span>
                        </a>
                        <div class="a-list">
-                           <a href="" class="list-item">Account</a>
+                           <a href="{{route('account')}}" class="list-item">Account</a>
                            <a href="" class="list-item">Wish List</a>
                             @if(Auth::check())
                            <a href="{{route('logout')}}" class="list-item" onclick="event.preventDefault(); this.querySelector("form.logout-form").submit()">
@@ -69,7 +69,7 @@
                            </a>
                             @else
                                 <a href="{{route('login')}}" class="list-item"> Login</a>
-                                <a href="{{rolute('register')}}" class="list-item"> register</a>
+                                <a href="{{route('register')}}" class="list-item"> register</a>
                             @endif
                        </div>
                    </li>

@@ -5,7 +5,9 @@
     .footer{
         background: #1f2630;
         color: #e7e0e0;
-        padding: 10px 0;
+        padding: 10px 20px;
+        bottom: 0;
+        /* border: 2px solid yellow; */
         
     }
     .footer .footer-section h3.section-title{
