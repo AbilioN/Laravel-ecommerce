@@ -14,6 +14,7 @@ class BrandController extends Controller
     public function manage(Request $req, BrandRepo $brepo){
 
         $this->authorize('manage' , Brand::class);
-        $brepo->insert(['name' => 'accer']); 
+        $df = $brepo->search();
+        $data = $df->getData();
     }
 }
