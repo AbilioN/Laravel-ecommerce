@@ -33,6 +33,16 @@
         </div>
     </div>
     @include('partials.footer')
+    <script src="{{asset('js/jquery.js')}}"></script>
+    @yield('js')
+
+    <script>
+        adjustSidebarHeight();
+        function adjustSidebarHeight(){
+            var main_content_height = $('.account-main-content').height();
+            $('.account-sidebar').css({height:main_content_height+'px'});
+        }
+    </script>
 </body>
 </html>
 
@@ -53,7 +63,5 @@
         /* height: 100vh; */
         /* float: left; */
     }
-    .ops{
-        margin-left: 15px;
-    }
+  
 </style>

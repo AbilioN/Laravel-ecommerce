@@ -199,3 +199,7 @@ form .form-control{
 .header-nav li:hover div.a-list{
     display:block;
 }
+
+.no-bold{
+    font-weight: normal;
+}

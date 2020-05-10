@@ -40,6 +40,13 @@ abstract class DataFilter{
         return $paginator;
     }
 
+    public function per_page($key, $value){
+        // echo $value;
+        // exit;
+        if(empty($this->$key)){
+            $this->$key=$value<=$this->max_per_page?$value:$this->max_per_page;
+        }
+    }
     public function setCriteria(array $criteria = []){
         foreach($criteria as $key=>$value){
             if(method_exists($this , $key)){
@@ -48,11 +55,7 @@ abstract class DataFilter{
         }
     }
 
-    public function per_page($key, $value){
-        if(!empty($this->$key)){
-            $this->$key=$value<=$this->max_per_page?$value:$this->max_per_page;
-        }
-    }
+  
 
     public function sort($key,$value){
         if(isset($this->sortingMethods[$key])){

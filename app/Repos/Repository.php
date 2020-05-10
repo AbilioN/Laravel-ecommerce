@@ -3,16 +3,19 @@
 namespace App\Repos;
 
 use Illuminate\Database\Eloquent\Model;
+use App\Components\DataFilters\DataFilter;
 
 class Repository{
 
     protected $model;
     protected $relations = [];
+    protected $filter;
 
     // all functions here will be shared by all repository classes
 
-    public function __construct(Model $model){
+    public function __construct(Model $model , DataFilter $filter){
         $this->model = $model;
+        $this->filter = $filter;
     }
 
     public function insert(array $data){

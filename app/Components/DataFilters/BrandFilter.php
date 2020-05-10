@@ -1,7 +1,7 @@
 <?php
 namespace App\Components\DataFilters;
 
-use App\Components\DataFilter;
+use App\Components\DataFilters\DataFilter;
 
 
 class BrandFilter extends DataFilter{
@@ -17,6 +17,10 @@ class BrandFilter extends DataFilter{
 
     public function sort_by_newest(){
         $this->builder->orderBy('created_at' , 'desc');
+    }
+
+    public function defaultMethod($key, $value){
+
     }
 }
 
