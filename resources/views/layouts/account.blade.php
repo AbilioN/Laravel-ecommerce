@@ -11,13 +11,13 @@
     <link rel="stylesheet" href="{{asset('css/account.css')}}">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
-
+    <script src="{{asset('js/helpers.js')}}"></script>
 
 </head>
 <body>
     @include('partials.header')
-    <div class="main cf account-main">
-        <div class="left account-sidebar">
+    <div class="main cf account-main bordaverde">
+        <div class="left account-sidebar bordarosa">
             <div class="row ops">
                 <div class="col col-12">
                     @include('partials.account-sidebar')
@@ -40,28 +40,42 @@
         adjustSidebarHeight();
         function adjustSidebarHeight(){
             var main_content_height = $('.account-main-content').height();
-            $('.account-sidebar').css({height:main_content_height+'px'});
+            $('.account-sidebar').css({height:main_content_height+'px'}); 
         }
     </script>
 </body>
 </html>
 
 <style>
+    .bordarosa{
+        /* border: 2px solid pink; */
+    }
+    .borda2{
+        /* border: 2px solid red; */
+    }
+    .bordaverde{
+        /* border: 4px solid green; */
+    }
     .left{
         float: left;
     }
     .main{
-        /* border: 3px solid black; */
-        height: 100vh;
+        height: auto;
     }
     .body{
-        height: 100vh;
+        /* height: 100vh; */
         /* border: 2px solid red; */
     }
     .account-main-content{
         /* border: 2px solid blue; */
-        /* height: 100vh; */
         /* float: left; */
+        /* height: 50px; */
+        padding-left: 50px;
+    }
+    .account-main{
+        display: flex;
+        /* height: 100vh; */
+
     }
   
 </style>

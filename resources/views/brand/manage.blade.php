@@ -19,7 +19,7 @@
     <div class="row">
         <div class="col col-lg-6 col-md-6 col-xs-12 col-sm-12">
             <form action="" method="GET">
-                <input type="text" placeholder="Search in brands">
+                <input type="text" placeholder="Search in brands" class="form-control2 control-block">
             </form>
         </div>
     </div>
@@ -32,4 +32,7 @@
             </div>
         </div>
     </div>
+    <style>
+ 
+    </style>
 @endsection

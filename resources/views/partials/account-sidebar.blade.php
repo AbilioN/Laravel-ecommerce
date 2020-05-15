@@ -32,6 +32,7 @@
         /* border: 2px solid red; */
     }
     .classe ul li{
+        /* border: 1px solid red; */
         margin-left: 50px;
         align-self: center;
 

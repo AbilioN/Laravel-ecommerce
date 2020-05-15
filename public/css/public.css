@@ -203,3 +203,110 @@ form .form-control{
 .no-bold{
     font-weight: normal;
 }
+
+/* table  */
+table{
+    width: 100%;
+    border-collapse: collapse;
+}
+table td, table th{
+    font-size: 30px;
+    text-align: left;
+    min-width: 120px;
+    border-bottom: 1px solid #ccc;
+    padding: 5px 3px;
+    position: relative;
+}
+table th{
+    color: #e7e0e0;
+}
+div .table-wrapper{
+    /* border: 2px solid red; */
+    overflow-x: auto;
+}
+table thead{
+    background: #1f2630;
+}
+
+table .select-box{
+  float: left;
+  width: 15px;
+  height: 15px;
+  background: #ededed;
+  border: 1px solid #ccc;
+  cursor: pointer;
+}
+
+
+/* end of table */
+/* forms */
+
+.form-control2{
+    height: 33px;
+    border: 3px solid #848484;
+    border-radius: 3px;
+    padding-left: 3px;
+
+}
+form .control-block{
+    display: block;
+    width: 100%;
+}
+/* end of forms */
+
+
+/* pagination */
+ul.pagination{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+/* end of pagination */
+
+/* dropdowns */
+.dropdown{
+    position: relative;
+    display:inline-block;
+}
+.dropdown .dropdown-menu{
+    position: absolute;
+    display: inline-block;
+    top: 100%;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    z-index: 1000;
+    min-width: 200px;
+    background: white;
+}
+.dropdown .dropdown-menu li {
+    margin: 5px 0;
+}
+.dropdown .dropdown-menu li .menu-item{
+    text-decoration: none;
+    color: #646464;
+    font-size: 12px;
+    padding: 4px 4px;
+    display: block;
+    font-family: sans-serif;
+    /* background: #ededed; */
+}
+.toggle-text{
+    font-size: 25px;
+    text-decoration: none;
+}
+
+/* end of dropdowns */
+/* buttons */
+.btn{
+    font-size: 13px;
+    text-decoration: none;
+    background: #ededed;
+    border: 1px solid #ccc;
+    padding: 5px 3px;
+    border-radius: 3px;
+    color: #646464;
+    font-family: sans-serif;
+}
+/* end of buttons */

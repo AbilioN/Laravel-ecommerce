@@ -7,5 +7,5 @@
 @endphp
 
 @foreach ($routes as $route)
-    <li><a href="{{route($route['name'])}}">{{$route['text']}} <i class="fa fa-angle-right"></i> </a></li>
+    <li><a href="{{route($route['name'],$route['params'])}}">{{$route['text']}} <i class="fa fa-angle-right"></i> </a></li>
 @endforeach
