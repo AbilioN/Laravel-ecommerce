@@ -7,7 +7,7 @@
         <table>
             <thead>
             @if(input('wcrud') || input('wselect'))
-                <th></th>
+                <th><span class="select-box"></span></th>
             @endif
                 <th>#</th>
                 <th>Brand Name</th>
@@ -33,8 +33,7 @@
                     <tr>
                         @if(input('wcrud') || input('wselect'))
                             <td>
-                                <span class="select-box">
-
+                                <span class="select-box ">
                                 </span>
                             </td>
                         @endif

@@ -71,7 +71,7 @@ define(['request'],function(Request){
                     errorElement.classList.add('form-error');
                     errorElement.innerHTML = errors[e];
                     input.insertAdjacentElement('afterEnd' , errorElement);
-                    this.errorElements.push(errorElement);
+                    this.errorElements.push(errorElement);  
                 }
             }
         }
