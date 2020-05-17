@@ -36,3 +36,10 @@
  
     </style>
 @endsection
+@section('js')
+ <script>
+     require(['request'], function(x){
+         console.log(x);
+     })
+ </script>
+@endsection

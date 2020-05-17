@@ -15,6 +15,7 @@ class BrandController extends Controller
         $this->authorize('manage' , Brand::class);
         $df = $brepo->search();
         $data = $df->getData();
+        // dd($data);
         $view_data['data'] = $data;
 
         if($req->ajax()){
