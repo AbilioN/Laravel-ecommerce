@@ -3,7 +3,6 @@ define(function(){
         constructor(){
             this.data = [
                 // {name: 'dani'} , {name: 'alex'} etc..
-
             ];
           
         }

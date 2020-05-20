@@ -39,7 +39,7 @@
 @section('js')
  <script>
      require(['request'], function(x){
-         console.log(x);
+        //  console.log(x);
      })
  </script>
 @endsection

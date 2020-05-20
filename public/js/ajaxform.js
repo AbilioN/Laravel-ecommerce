@@ -180,7 +180,7 @@ define(['request'],function(Request){
         submit(){
             var submitElement = this.querySelector("[type = 'submit']");
             if(submitElement){
-                submitElement.click()
+                submitElement.click();
             }
         }
 
