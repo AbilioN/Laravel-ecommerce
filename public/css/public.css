@@ -237,7 +237,9 @@ table .select-box{
   border: 1px solid #ccc;
   cursor: pointer;
 }
-
+table .select-box.selected{
+    background: gray;
+}
 
 /* end of table */
 /* forms */

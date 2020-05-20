@@ -38,8 +38,9 @@
 @endsection
 @section('js')
  <script>
-     require(['request'], function(x){
-        //  console.log(x);
-     })
+    require(['data-list'] , function(DataList){
+        var dl = new DataList({selector:'.data'});
+        dl.init();
+    });
  </script>
 @endsection

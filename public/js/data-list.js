@@ -207,18 +207,16 @@ define(['request' , 'ajax-form' , 'list'],function(Request, AjaxForm, List){
             var this2 = this;
             links.forEach(function(link){
                 link.addEventListener('click' , function(e){
-                    e.preventDefault(0);
+                    e.preventDefault();
                     e.stopPropagation();
                     addAjaxLoader();
-                    var res = this2.request.get(link.getAttribute('href') , 
-                    {insertedData: this2.insertedData.toJson()});
-                    
+                    var res = this2.request.get(link.getAttribute('href') ,
+                    {insertedData: this2.insertedData.toJson()});         
+                    e.preventDefault();
                     if(res.view){
                         this2.update(res.view); 
                         removeAjaxLoader();
                     }
-
-
                 });
             });
         }
@@ -384,7 +382,7 @@ define(['request' , 'ajax-form' , 'list'],function(Request, AjaxForm, List){
             }
         }
         getItemElements(){
-            return this.elem.querySelector('.data-item');
+            return this.elem.querySelectorAll('.data-item');
         }
         init(){
             this.initElem();

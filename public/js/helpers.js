@@ -99,3 +99,20 @@ function compareObjects(obj1, obj2, ignoreAttributs = []){
 
     }
 }
+
+function addAjaxLoader(){
+    var wrapper =  document.createElement('div');
+    wrapper.classList.add('ajax-loader-wrapper');
+    var image = document.createElement('img');
+    image.src="/images/app/ajax-loader.gif";
+    wrapper.append(image);
+    document.body.append(wrapper);
+
+}
+
+function removeAjaxLoader(){
+    var wrapper = document.querySelector('.ajax-loader-wrapper');
+    if(wrapper){
+        wrapper.remove();
+    }
+}

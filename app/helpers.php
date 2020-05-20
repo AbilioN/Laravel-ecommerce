@@ -7,4 +7,8 @@
     function input($key = null){
         return !empty($key)?request()->$key:request()->all();
     }
+
+    function json($value){
+        return response()->json($value);
+    }
 ?>

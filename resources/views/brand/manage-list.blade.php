@@ -6,6 +6,7 @@
     <div class="table-wrapper">
         <table>
             <thead>
+                <tr class="data-item master">
             @if(input('wcrud') || input('wselect'))
                 <th><span class="select-box"></span></th>
             @endif
@@ -22,15 +23,14 @@
                         </div>
                     </th>
                 @endif
-
+            </tr>
             </thead>
             <tbody>
                 @php
                     $index = ($data->currentPage() - 1)*$data->perPage() +1;
-
                 @endphp
                 @foreach ($data as $d)
-                    <tr>
+                    <tr class="data-item" data-id ={{$d->id}}>
                         @if(input('wcrud') || input('wselect'))
                             <td>
                                 <span class="select-box ">

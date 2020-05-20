@@ -19,8 +19,8 @@ class BrandController extends Controller
         $view_data['data'] = $data;
 
         if($req->ajax()){
-            $view = view('brand.manage-list')->with($data)->render();
-            return view(['view' => $view]);
+            $view = view('brand.manage-list')->with($view_data)->render();
+            return json(['view' => $view]);
         }
         return view('brand.manage' , $view_data);
     }
