@@ -30,12 +30,12 @@ define(['request' , 'ajax-form' , 'list'],function(Request, AjaxForm, List){
         }
         disableDeleteForm(){
             if(this.deleteForm){
-                this.deleteForm.disableSubmit();
+                this.deleteForm.disable();
             }
         }
         enableDeleteForm(){
             if(this.deleteForm){
-                this.deleteForm.enableSubmit();
+                this.deleteForm.enable();
             }
         }
 
@@ -267,7 +267,7 @@ define(['request' , 'ajax-form' , 'list'],function(Request, AjaxForm, List){
                 return;
             }
             var this2 = this;
-            item.deleteForm.beforeSend(function(){
+            item.deleteForm.onBeforeSend(function(){
                 if(item.clientDelete()){
                     this2.deleteClientItem(item);
                     return false;
@@ -377,7 +377,7 @@ define(['request' , 'ajax-form' , 'list'],function(Request, AjaxForm, List){
             });
         }
         addToSelectIds(id){
-            if(!this.selectIds.includes(id)){
+            if(!this.selectedIds.includes(id)){
                 this.selectedIds.push(id);
             }
         }
@@ -389,6 +389,5 @@ define(['request' , 'ajax-form' , 'list'],function(Request, AjaxForm, List){
             this.initInsertForm();
             this.initUpdatableComponents();
         }
-        
     }
 });
