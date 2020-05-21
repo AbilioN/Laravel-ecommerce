@@ -2,7 +2,7 @@ define(['request'],function(Request){
     return class AjaxForm{
         constructor(config={}){
             this.form = null;
-            this.request = Request();
+            this.request = new Request();
             this.data={};
             this.config=config;
             this.sendCallback=null;
@@ -90,7 +90,6 @@ define(['request'],function(Request){
                 });
             });
         }
-
         setForm(form){
             this.form = form;
             return this;
@@ -138,7 +137,7 @@ define(['request'],function(Request){
             }
         }
         initSensors(){
-            var sensors = this.getForm().querySelectorAll('.sensor');
+            var sensors = this.form.querySelectorAll('.sensor');
             var this2 = this;
             sensors.forEach(function(s){
                 if(s.type == 'select-one'){
@@ -156,11 +155,12 @@ define(['request'],function(Request){
             this.initForm();
             this.initFileUploaders();
             this.initSensors();
+            var this2 = this;
             this.form.onsubmit=function(e){
                 e.preventDefault();
                 if(this.callBeforeSendCallback()!==false){
-                    this.loadData()
-                    this.send(this.form.action,this.form.method,this.data);
+                    this2.loadData()
+                    this2.send(this2.form.action,this2.form.method,this2.data);
                 }
             }
         }

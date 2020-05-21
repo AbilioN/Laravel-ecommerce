@@ -30,5 +30,6 @@ Route::group(['prefix' => 'admin'] , function(){
     Route::get('brands/save' , 'BrandController@save')->name('brand_save');
     Route::get('brands/{id}/update' , 'BrandController@update')->name('brand_update');
     Route::delete('brands/{id}' , 'BrandController@delete')->name('brand_delete');
+    Route::delete('brands', 'BrandController@deleteAll')->name('brands_delete');
     // end of brands routes
 });

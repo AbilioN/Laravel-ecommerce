@@ -17,7 +17,16 @@
                         <div class="dropdown a-dropdown teste">
                             <a href="#" class="btn dropdown-toggle"><span class="toggle-text">Bulk Actions </span><i style="margin:0 3px;" class="fa fa-caret-down"></i></a>
                             <ul class="dropdown-menu">
-                                <li><a href="" class="menu-item" data-text="Delete all">Delete all</a></li>
+                                <li>
+                                    <form action="{{route('brands_delete')}}" method="POST" class="delete-form">
+                                       @csrf
+                                       @method('DELETE')
+                                       @foreach($data as $key=>$d)
+                                            <input type="hidden" name="ids[{{$key}}]" id="">
+                                       @endforeach
+                                            <input type="submit" value="Delete all" class="btn">
+                                    </form>
+                                </li>
                                 <li><a href="" class="menu-item" data-text="Clear all" >Clear all</a></li>
                             </ul>
                         </div>

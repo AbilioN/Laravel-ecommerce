@@ -85,7 +85,7 @@ define(['request' , 'ajax-form' , 'list'],function(Request, AjaxForm, List){
         clientDelete(){
             if(this.deleteForm)
                 return true;
-            return this.deleteForm.querySelector('.client-delete');
+            return this.deleteForm.form.querySelector('.client-delete');
         }
         remove(){
             this.elem.remove();
@@ -285,7 +285,6 @@ define(['request' , 'ajax-form' , 'list'],function(Request, AjaxForm, List){
                         this2.removeInsertedObject(item.getId());
                         this2.removeItem(item);
                     }
-
                 }
             });
         }

@@ -27,6 +27,10 @@ class Repository{
         }
     }
 
+    public function with(array $relations){
+        $this->relations = array_merge($this->relations, $relations);
+        return $this; 
+    }
     public function relations(array $relations){
         $this->relations  = $relations;
         return $this;
@@ -36,6 +40,27 @@ class Repository{
         $this->filter->setCriteria($criteria);
         $this->filter->buildQuery();
         return $this->filter;
+    }
+
+    public function deleteByAttributes($attributes = []){
+        $query = $this->model->query();
+
+        foreach($attributes as $key=>$value){
+            if(is_array($value)){
+                $query->where(function($q) use($key, $value){
+                    foreach($value as $v){
+                        $q->orWhere($key, $v);
+                    }
+                });
+            }else{
+                $query->where($key, $value); 
+            }
+        }
+        return $query->delete();
+    }
+
+    public function deleteMany($list){
+        return $this->model->destroy($list);
     }
 }
 
